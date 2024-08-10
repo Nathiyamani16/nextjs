@@ -1,8 +1,13 @@
 import React from 'react'
+import Products from './products'
+import { fetchProducts } from '@/app/api/apiproducts'
 
-const page = () => {
+const page = async () => {
+  const products= await fetchProducts()
   return (
-    <div>page</div>
+    <>
+    <Products products={products}/>
+    </>
   )
 }
 
