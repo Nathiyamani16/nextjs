@@ -1,4 +1,3 @@
-// app/page.js
 import React from 'react';
 import Home from './components/home';
 import FeatureProducts from './components/featureproducts';

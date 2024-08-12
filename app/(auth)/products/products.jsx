@@ -2,25 +2,31 @@ import Link from 'next/link';
 import React from 'react';
 
 const Products = ({ products }) => {
+  console.log(products)
+
   return (
     <div className='ml-32 mr-32'>
       <div className='ml-7 font-bold'>Newly</div>
       <div className='flex flex-wrap justify-between cursor-pointer'>
         {products?.map((product) => (
+
           <div key={product.id} className='w-1/3 p-4'>
-            <div className='bg-gray-100 shadow-md rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-95'>
-              <Link href={`/singleproduct/${product.id}`}>
-                <img
-                  src={product.image}
-                  alt={product.title}
-                  className='w-20 h-20 object-fit'
-                />
-                <h3 className='text-black mt-2 font-semibold w-full'>{product.title}</h3>
-                <p className='text-gray-700'>${product.price}</p>
-              </Link>
+            <div className=' h-full w-full '>
+
+              <div className='bg-gray-100 shadow-md rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-95'>
+                <Link href={`/singleproduct/${product.id}`}>
+                  <img
+                    src={product.image}
+                    alt={product.title}
+                    className='w-20 h-20 object-fit' />
+                  <h3 className='text-black mt-2 font-semibold w-full'>{product.title}</h3>
+                  <p className='text-gray-700'>${product.price}</p>
+                </Link>
+              </div>
             </div>
           </div>
         ))}
+
       </div>
     </div>
   );

@@ -59,11 +59,11 @@ const FeatureProducts = ({ products }) => {
         {products?.map((curr,idx) => (
           <div key={idx} className='w-1/3 p-4'>
             <img
-              src={curr.images}
+              src={curr.image}
               alt={curr.title}
-              className='w-full h-auto object-cover'
+              className=' h-auto w-28 object-cover'
             />
-            <h3 className='text-black mt-2 font-semibold'>{curr.title}</h3>
+            <h3 className='text-black mt-2 font-semibold '>{curr.title}</h3>
             <p className='text-gray-700'>${curr.price}</p>
           </div>
         ))}
